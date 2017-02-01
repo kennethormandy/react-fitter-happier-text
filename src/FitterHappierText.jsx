@@ -64,7 +64,7 @@ class FitterHappierText extends React.Component {
           x='50%'
           y={this.props.baseline}
           style={styles.text}>
-          {this.props.text}
+          {this.props.text || this.props.children}
         </text>
       </svg>
     )

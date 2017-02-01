@@ -23,6 +23,18 @@ React.render(<FitterHappierText text='Hello World' />, document.querySelector('#
 
 Note: this component relies on `element.offsetWidth` and only works in client-side contexts.
 
+### Usage with children
+
+```js
+var React = require('react')
+var FitterHappierText = require('react-fitter-happier-text')
+
+React.render(
+  <FitterHappierText>
+    1<tspan opacity="0.5">st</tspan>
+  </FitterHappierText>, document.querySelector('#hello-world'))
+```
+
 ## Related
 
 http://jxnblk.com/fitter-happier-text
