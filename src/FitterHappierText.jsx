@@ -14,7 +14,7 @@ class FitterHappierText extends React.Component {
   }
 
   resize () {
-    let el = this.refs.text;
+    let el = this.textRef
     let state = this.state
     let width = el.offsetWidth || el.getComputedTextLength()
     let height = el.offsetHeight || 24
@@ -60,7 +60,7 @@ class FitterHappierText extends React.Component {
         viewBox={viewBox}
         style={styles.svg}>
         <text
-          ref='text'
+          ref={(text) => { this.textRef = text }}
           x='50%'
           y={this.props.baseline}
           style={styles.text}>
